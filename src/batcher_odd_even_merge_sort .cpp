@@ -1,15 +1,5 @@
 /******************************************************************************
- * batcher_odd_even_merge_sort.cpp
- *
  * Batcher Odd-Even Merge Sort - 8-input static sorting network
- * Fixed for Cadence Stratus HLS 20.2
- *
- * Changes from original for Stratus compatibility:
- *   1. SC_MODULE renamed to batcher_odd_even_merge_sort (matches project)
- *   2. SC_THREAD -> SC_CTHREAD with reset_signal_is (required by Stratus)
- *   3. do-while reset loop replaced with single wait() reset block
- *   4. compare_and_swap moved inline into sort_process (Stratus requirement)
- *   5. Testbench and sc_main wrapped in #ifndef STRATUS_HLS guards
  *
  * ---------------------------------------------------------------------
  *  NETWORK TOPOLOGY  -  19 comparators across 6 pipeline stages
@@ -67,7 +57,7 @@ SC_MODULE(batcher_odd_even_merge_sort) {
 
         // ── Reset state ───────────────────────────────────────────────────────
         // Everything assigned here is the reset value of each register.
-        // Stratus HLS requires all outputs to be initialised in this block.
+
         out_valid.write(false);
         for (int i = 0; i < 8; i++) {
             dout[i].write(data_t(0));
