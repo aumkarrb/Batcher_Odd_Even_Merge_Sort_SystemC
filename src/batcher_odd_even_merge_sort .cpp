@@ -286,7 +286,7 @@ int sc_main(int argc, char *argv[]) {
     cout << "  ======================================================\n";
     cout << "   Batcher Odd-Even Merge Sort -- 8-input sorting network\n";
     cout << "   SystemC HLS-Compatible Implementation\n";
-    cout << "   Data type : sc_int<16>  |  Clock period : 10 ns\n";
+    cout << "   Data type : sc_int<16>  |  Clock period : 20 ns\n";
     cout << "   Pipeline latency : 8 cycles  |  Comparators : 19\n";
     cout << "  ======================================================\n\n";
 
