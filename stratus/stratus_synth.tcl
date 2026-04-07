@@ -126,6 +126,9 @@ set_attr sc_options \
 
 puts "Registering HLS module: $TOP_MODULE  <-  $CPP_FILE"
 define_hls_module $TOP_MODULE $CPP_FILE
+set_attr power on              # enables power estimation engine
+set_attr default_toggle_rate   # statistical toggle rate (0.2 = 20%)
+set_attr power_clock_gating    # clock gating insertion
 
 
 # =============================================================================
