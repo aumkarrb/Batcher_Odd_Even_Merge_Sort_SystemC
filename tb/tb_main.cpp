@@ -2,15 +2,6 @@
  * tb_main.cpp
  *
  * Batcher Odd-Even Merge Sort  -  Testbench implementation + sc_main
- *
- * Build (example, GCC + SystemC):
- *   g++ -std=c++14 -DSC_DISABLE_API_VERSION_CHECK \
- *       -I$SYSTEMC_HOME/include \
- *       -L$SYSTEMC_HOME/lib-linux64 -lsystemc \
- *       odd_even_merge_sort.cpp tb_main.cpp -o sim
- *
- * Optional waveform dump:
- *   Compile with -DDUMP_VCD to emit odd_even_sort_wave.vcd
  ******************************************************************************/
 
 #include "tb_driver.h"
