@@ -1,8 +1,8 @@
 /******************************************************************************
- * odd_even_merge_sort.h
+ * 
  *
  * Batcher Odd-Even Merge Sort  -  8-input static sorting network
- * Module declaration for Cadence Stratus HLS synthesis
+ * 
  *
  * ---------------------------------------------------------------------
  *  NETWORK TOPOLOGY  -  19 comparators across 6 pipeline stages
@@ -77,4 +77,4 @@ private:
     void sort_process();
 };
 
-#endif // ODD_EVEN_MERGE_SORT_H
+#endif 
