@@ -1,8 +1,7 @@
 /******************************************************************************
  * tb_driver.h
  *
- * Batcher Odd-Even Merge Sort  -  Self-checking SystemC Testbench
- * Header / module declaration
+ * Batcher Odd-Even Merge Sort  
  *
  * The testbench consists of two co-operating SC_THREADs:
  *
