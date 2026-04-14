@@ -1,7 +1,7 @@
 # =============================================================================
 #  stratus_synth.tcl
 #
-#  Cadence Stratus HLS Synthesis Script
+# 
 #  Design   : Batcher Odd-Even Merge Sort  (8-input, 16-bit, 6 pipeline stages)
 #  DUT      : batcher_odd_even_merge_sort          (SC_MODULE name in the .cpp file)
 #  Source   : batcher_odd_even_merge_sort.cpp  (single file: DUT + TB + sc_main)
@@ -16,9 +16,6 @@
 #                    stratus
 #                    % source stratus_synth.tcl
 #
-#  ── CUSTOMISATION ────────────────────────────────────────────────────────────
-#  Only edit SECTION 0 if anything changes (paths, clock period, etc.).
-#  Never edit anything below SECTION 0.
 # =============================================================================
 
 
@@ -104,11 +101,7 @@ puts ""
 #                    compile only the DUT by excluding TB-only code wrapped in:
 #                        #ifndef SYNTHESIS
 #                        ... tb_driver, sc_main ...
-#                        #endif
-#                    NOTE: If your source file does not have these guards yet,
-#                    Stratus will still attempt synthesis of TOP_MODULE only,
-#                    but adding the guards is strongly recommended (see below).
-#
+#                        #endif#
 #  -DSC_DISABLE_API_VERSION_CHECK : suppresses SystemC version mismatch errors
 # =============================================================================
 
@@ -116,12 +109,6 @@ set_attr sc_options \
     "-I${SRC_DIR} -DSYNTHESIS -DSC_DISABLE_API_VERSION_CHECK"
 
 
-# =============================================================================
-#  SECTION 4 — REGISTER THE HLS MODULE
-#
-#  Tells Stratus which SC_MODULE is the synthesis target.
-#  The testbench class tb_driver and sc_main are ignored — Stratus only
-#  elaborates and synthesises the module named in TOP_MODULE.
 # =============================================================================
 
 puts "Registering HLS module: $TOP_MODULE  <-  $CPP_FILE"
