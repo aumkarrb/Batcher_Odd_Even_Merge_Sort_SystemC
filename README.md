@@ -1,4 +1,3 @@
-# Batcher's Odd Even Merge Sort in SystemC
 # Batcher's Odd-Even Merge Sort — SystemC / HLS
 
 > HLS-Synthesizable Batcher Odd-Even Merge Sort in SystemC, targeting Cadence Stratus High-Level Synthesis
