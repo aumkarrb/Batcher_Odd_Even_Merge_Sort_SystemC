@@ -1,7 +1,7 @@
 # Batcher's Odd Even Merge Sort in SystemC
 # Batcher's Odd-Even Merge Sort — SystemC / HLS
 
-> **AHA Elective Mini-Project Assignment** · HLS-Synthesizable Batcher Odd-Even Merge Sort in SystemC, targeting Cadence Stratus High-Level Synthesis
+> HLS-Synthesizable Batcher Odd-Even Merge Sort in SystemC, targeting Cadence Stratus High-Level Synthesis
 
 ![Language](https://img.shields.io/badge/Language-C%2B%2B%20%7C%20SystemC-blue)
 ![HLS Tool](https://img.shields.io/badge/HLS-Cadence%20Stratus%2020.2-orange)
